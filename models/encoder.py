@@ -32,7 +32,8 @@ class ResNetSimple_decoder(nn.Module):
         fDim=[256, 256, 256, 256],
         direction=["flat", "up", "up", "up"],
         out_dim=3,
-        conv_type='hpds'
+        conv_type='hpds',
+        hid_layer=[2, 3, 4, 5]
     ):
         super(ResNetSimple_decoder, self).__init__()
         self.models = nn.ModuleList()
@@ -44,7 +45,7 @@ class ResNetSimple_decoder(nn.Module):
                     fDim[i + 1],
                     direction[i],
                     kernel_size=3,
-                    hid_layer=2 + i,
+                    hid_layer=hid_layer[i],
                     padding=1,
                     conv_type=conv_type
                 )
@@ -125,7 +126,8 @@ class ResNetSimple(nn.Module):
             fDim=fmapDim,
             direction=["flat", "up", "up", "up"],
             out_dim=heatmapDim * handNum,
-            conv_type=conv_type
+            conv_type=conv_type,
+            hid_layer=[2, 3, 4, 5]
         )
 
         self.dp_decoder = ResNetSimple_decoder(
@@ -133,7 +135,8 @@ class ResNetSimple(nn.Module):
             fDim=fmapDim,
             direction=["flat", "up", "up", "up"],
             out_dim=3 * handNum,
-            conv_type=conv_type
+            conv_type=conv_type,
+            hid_layer=[2, 3, 4, 5]
         )
 
         self.mask_decoder = ResNetSimple_decoder(
@@ -141,7 +144,8 @@ class ResNetSimple(nn.Module):
             fDim=fmapDim,
             direction=["flat", "up", "up", "up"],
             out_dim=handNum,
-            conv_type=conv_type
+            conv_type=conv_type,
+            hid_layer=[2, 3, 4, 5]
         )
         self.handNum = handNum
 
