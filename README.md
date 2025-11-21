@@ -32,6 +32,15 @@ $^{2}\;School\;of\;Software,\;Jiangxi\;Agricultural\;University,\;Jiangxi\;33004
 
 - gradio
 
+### Data Preparation
+1. Download necessary assets [misc.tar.gz](https://github.com/hmx1123/Efficient-Visual-Attention-Based-Lightweight-3D-Hand-Reconstruction./releases/tag/misc.tar.gz) and unzip it.
+2. Download InterHand2.6M dataset and unzip it.
+3. Process the dataset by the code provided by [IntagHand](https://github.com/Dw1010/IntagHand)
+
+```bash
+python dataset/interhand.py --data_path PATH_OF_INTERHAND2.6M --save_path ./data/interhand2.6m/
+```
+
 ### Pre-trained model and data
 
 - Register and download [MANO](https://mano.is.tue.mpg.de/)  data. Put `MANO_LEFT.pkl` and `MANO_RIGHT.pkl` in `misc/mano`
