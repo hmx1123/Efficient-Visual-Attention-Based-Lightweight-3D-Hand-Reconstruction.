@@ -138,7 +138,7 @@ vert mean error:
     all: 9.048810228705406 mm
 ```
 
-
-## Acknowledgement
-
-The pytorch implementation of MANO is based on [manopth](https://github.com/hassony2/manopth). The GCN network is based on [hand-graph-cnn](https://github.com/3d-hand-shape/hand-graph-cnn). We thank the authors for their great job!
+## Acknowledgements
+ - Our code is based on [IntagHand](https://github.com/Dw1010/IntagHand), [SwiftFormer](https://github.com/Amshaker/SwiftFormer) We thank the authors of these inspiring works.
+ - We also thank the authors of [InterHand2.6M](https://mks0601.github.io/InterHand2.6M/) for the useful dataset.
+ - The renderer are based on the renderer from [Pytorch3D](https://pytorch3d.org/). 
