@@ -141,8 +141,4 @@ vert mean error:
 
 ## Acknowledgement
 
-The pytorch implementation of MANO is based on [manopth](https://github.com/hassony2/manopth). The GCN network is based on [hand-graph-cnn](https://github.com/3d-hand-shape/hand-graph-cnn). The heatmap generation and inference is based on [DarkPose](https://github.com/ilovepose/DarkPose). We thank the authors for their great job!
-
-
-
-# Efficient-Visual-Attention-Based-Lightweight-3D-Hand-Reconstruction.
+The pytorch implementation of MANO is based on [manopth](https://github.com/hassony2/manopth). The GCN network is based on [hand-graph-cnn](https://github.com/3d-hand-shape/hand-graph-cnn). We thank the authors for their great job!
